@@ -5,6 +5,15 @@ plugins {
 }
 
 android {
+    compileOptions {
+        isCoreLibraryDesugaringEnabled = true
+    }
+}
+dependencies {
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
+}
+
+android {
     namespace = "com.example.ajolotito"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
